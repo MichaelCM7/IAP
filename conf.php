@@ -15,7 +15,8 @@
   $conf['DB_HOST'] = 'localhost';
   $conf['DB_USER'] = 'root';
   $conf['DB_PASS'] = '77092295';
-  $conf['DB_NAME'] = 'IAP';
+  $conf['DB_NAME'] = 'iap';
+  $conf['DB_PORT'] = 3309;
 
   // print '<br>'
   // print "Copyright &copy - ". $conf['site_name']." ".date("Y");
