@@ -1,3 +1,4 @@
+<script src="/js/confirmPassword.js"></script>
 <?php
 class forms {
     public function signup() {
@@ -19,7 +20,7 @@ class forms {
 <?php
     }
     private function submit_button($text) {
-        return "<button type='submit'>$text</button>";
+        return "<button onCLick='confirmPassword()' type='submit'>$text</button>";
     }
 
     public function signin() {

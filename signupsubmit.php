@@ -15,5 +15,5 @@
 
   // mysqli_query($connection, $sql);
 
-  echo "User inserted successfully.";
+  //echo "User inserted successfully.";
 ?>
