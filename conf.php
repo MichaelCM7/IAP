@@ -18,6 +18,6 @@
   $conf['DB_NAME'] = 'iap';
   $conf['DB_PORT'] = 3309;
 
-  // print '<br>'
-  // print "Copyright &copy - ". $conf['site_name']." ".date("Y");
+  //  Email configuration
+  
 ?>

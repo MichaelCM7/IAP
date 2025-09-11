@@ -2,20 +2,38 @@
 class forms {
     public function signup() {
 ?>
-<form id='signupForm' action='signupsubmit.php' method='post'>
-    <label for='firstname'>First name</label><br>
-    <input type='text' id='firstname' name='firstname' required><br><br>
-    <label for='lastname'>Last name</label><br>
-    <input type='text' id='lastname' name='lastname' required><br><br>
-    <label for='email'>Email</label><br>
-    <input type='email' id='email' name='email' required><br><br>
-    <label for='password'>Password</label><br>
-    <input type='password' id='password' name='password' required><br><br>
-    <label for="confirmPassword">Confirm Password</label><br>
-    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
-    <button type='submit'>Sign Up</button>
-    <p>Already have an account? <a href='login.php'>Log in</a></p>
-</form>
+    <main class="container">
+        <div class="form-container">
+            <h1 class="text-center mb-4">Join Project Impossible</h1>
+            <p class="text-center mb-4">Start your journey to achieve the impossible</p>
+            <form id='signupForm' action='signupsubmit.php' method='post'>  
+                <div class="form-group">
+                    <label for='firstname'>First name</label>
+                    <input type='text' id='firstname' name='firstname' required>
+                </div>
+                <div class="form-group">
+                    <label for='lastname'>Last name</label>
+                    <input type='text' id='lastname' name='lastname' required>
+                </div>
+                <div class="form-group">
+                    <label for='email'>Email</label>
+                    <input type='email' id='email' name='email' required>
+                </div>
+                <div class="form-group">
+                    <label for='password'>Password</label>
+                    <input type='password' id='password' name='password' required>
+                </div>
+                <div class="form-group">
+                    <label for="confirmPassword">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                </div>
+                <button type='submit' class="btn btn-primary" style="width: 100%;">Sign Up</button>
+            </form>       
+            <p class="text-center" style="margin-top: 1.5rem;">
+                Already have an account? <a href="login.php" style="color: var(--primary);">Log in here</a>
+            </p>
+        </div>
+    </main>
 <script type="module">
 import { confirmPassword } from '/IAP/js/confirmPassword.js';
 
@@ -28,16 +46,28 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
 <?php
     }
 
-    public function signin() {
+    public function login() {
 ?>
-<form action='login.php' method='post'>
-    <label for='username'>Username:</label><br>
-    <input type='text' id='username' name='username' required><br><br>
-    <label for='password'>Password:</label>
-    <input type='password' id='password' name='password' required><br><br>
-    <button type='submit'>Log In</button>
-    <a href='./'>Don't have an account? Sign up</a>
-</form>
+    <main class="container">
+        <div class="form-container">
+            <h1 class="text-center mb-4">Join Project Impossible</h1>
+            <p class="text-center mb-4">Start your journey to achieve the impossible</p>
+            <form id='signupForm' action='signupsubmit.php' method='post'>  
+                <div class="form-group">
+                    <label for='email'>Email</label>
+                    <input type='email' id='email' name='email' required>
+                </div>
+                <div class="form-group">
+                    <label for='password'>Password:</label>
+                    <input type='password' id='password' name='password' required>
+                </div>
+                <button type='submit' class="btn btn-primary" style="width: 100%;">Sign Up</button>
+            </form>       
+            <p class="text-center" style="margin-top: 1.5rem;">
+                Don't have an account <a href="signup.php" style="color: var(--primary);">Sign up here</a>
+            </p>
+        </div>
+    </main>
 <?php
     }
 }

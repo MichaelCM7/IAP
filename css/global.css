@@ -181,3 +181,43 @@ h6 {
   padding: 2rem 0;
   margin-top: 4rem;
 }
+
+.form-container {
+  max-width: 400px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--card);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--card-foreground);
+}
+
+.form-group input {
+  width: 96%;
+  padding: 0.35rem;
+  border: 2px solid var(--dark);
+  border-radius: var(--radius);
+  background-color: var(--light);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--ring);
+}
+
+.form-group button{
+  
+}
