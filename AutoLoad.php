@@ -1,4 +1,5 @@
 <?php
+  require 'Plugins/PHPMailer/vendor/autoload.php';
   require 'conf.php';
   $directory = array("Global", "layouts", "Forms");
 
@@ -10,7 +11,7 @@
       }
   });
   // Now you can create instances of classes without manually including their files
-  $sample = new sample();
+  //$sample = new sample();
   $layout = new layouts();
   $forms = new forms();
 ?>
