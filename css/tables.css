@@ -1,0 +1,19 @@
+:root{
+  --border-color: #000;
+}
+
+table{
+  border: 1px solid var(--border-color);
+  border-collapse: collapse;
+}
+
+tr{
+  border: 1px solid var(--border-color);
+  border-collapse: collapse;
+}
+
+td{
+  border: 1px solid var(--border-color);
+  border-collapse: collapse;
+  padding: 10px 20px;
+}

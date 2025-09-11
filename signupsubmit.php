@@ -1,4 +1,13 @@
-<?php
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/IAP/css/tables.css">
+  <title>Sign Up Submit</title>
+</head>
+<body>
+  <?php
   require "dbconnect.php";
   require_once __DIR__ . '/Plugins/PHPMailer/vendor/autoload.php';
   require __DIR__. "/Global/SendMail.php";
@@ -16,13 +25,19 @@
   }
   $password = $_POST["password"];
 
-  // $sql = "INSERT INTO users (firstname, lastname, email, password) 
-  //         VALUES ('$first_name', '$last_name', '$email', '$password')";
-
-  // mysqli_query($connection, $sql);
-
-  //echo "User inserted successfully.";
+  //Insert Data in Maria DB
+  $sql = "INSERT INTO users (firstname, lastname, email, password)".
+           "VALUES ('$first_name', '$last_name', '$email', '$password')";
+  mysqli_query($connection, $sql);
   
+
+  $sqldata = "SELECT * FROM users";
+  $dbresult = mysqli_query($connection, $sqldata);
+
+
+  echo "User inserted successfully.";
+
+  //Mail client info
   $mailCnt = [
     'name_from' => $conf['site_name'],
     'mail_from' => $conf['site_email'],
@@ -38,7 +53,7 @@
         Support Team.<br>
         Project Impossible.
     "
-];
+  ];
 
   // Send the email
   $SendMail = new SendMail();
@@ -49,4 +64,22 @@
   } else {
     echo "Sign Up Failed";
   }
+
+  
 ?>
+  <ol>
+    <?php
+      if ($dbresult->num_rows > 0) {
+        while($row = $dbresult->fetch_assoc()) {
+            echo "
+            <li> <b>User ID</b>: " . $row["user_id"]." <b>First Name</b>: ".$row["firstname"].
+            " <b>Last Name</b>: ". $row["lastname"]." <b>Email</b>: ".$row["email"]." <b>Registration Date</b>: "
+            .$row["registration_date"]."</li>" ;
+        }
+      } else {
+        echo "0 results";
+      }
+    ?>
+  </ol>
+</body>
+</html>

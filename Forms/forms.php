@@ -9,23 +9,23 @@ class forms {
             <form id='signupForm' action='signUpSubmit.php' method='post'>  
                 <div class="form-group">
                     <label for='firstname'>First name</label>
-                    <input type='text' id='firstname' name='firstname' required>
+                    <input type='text' id='firstname' name='firstname' required maxlength="50">
                 </div>
                 <div class="form-group">
                     <label for='lastname'>Last name</label>
-                    <input type='text' id='lastname' name='lastname' required>
+                    <input type='text' id='lastname' name='lastname' required maxlength="50">
                 </div>
                 <div class="form-group">
                     <label for='email'>Email</label>
-                    <input type='email' id='email' name='email' required>
+                    <input type='email' id='email' name='email' required maxlength="100">
                 </div>
                 <div class="form-group">
                     <label for='password'>Password</label>
-                    <input type='password' id='password' name='password' required>
+                    <input type='password' id='password' name='password' required minlength="8" maxlength="50">
                 </div>
                 <div class="form-group">
                     <label for="confirmPassword">Confirm Password</label>
-                    <input type="password" id="confirmPassword" name="confirmPassword" required>
+                    <input type="password" id="confirmPassword" name="confirmPassword" required minlength="8" maxlength="50">
                 </div>
                 <button type='submit' class="btn btn-primary" style="width: 100%;">Sign Up</button>
             </form>       
@@ -55,11 +55,11 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
             <form id='signupForm' action='' method='post'>  
                 <div class="form-group">
                     <label for='email'>Email</label>
-                    <input type='email' id='email' name='email' required>
+                    <input type='email' id='email' name='email' required maxlength="100">
                 </div>
                 <div class="form-group">
                     <label for='password'>Password:</label>
-                    <input type='password' id='password' name='password' required>
+                    <input type='password' id='password' name='password' required maxlength="50">
                 </div>
                 <button type='submit' class="btn btn-primary" style="width: 100%;">Sign Up</button>
             </form>       
