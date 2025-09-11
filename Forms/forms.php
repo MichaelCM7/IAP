@@ -1,9 +1,8 @@
-<script src="/js/confirmPassword.js"></script>
 <?php
 class forms {
     public function signup() {
- ?>
- <form action='signupsubmit.php' method='post'>
+?>
+<form id='signupForm' action='signupsubmit.php' method='post'>
     <label for='firstname'>First name</label><br>
     <input type='text' id='firstname' name='firstname' required><br><br>
     <label for='lastname'>Last name</label><br>
@@ -13,25 +12,33 @@ class forms {
     <label for='password'>Password</label><br>
     <input type='password' id='password' name='password' required><br><br>
     <label for="confirmPassword">Confirm Password</label><br>
-    <input type="password" id="confrimPassword" name="confirmPassword" required><br><br>
-    <?php echo $this->submit_button('Sign Up'); ?> 
+    <input type="password" id="confirmPassword" name="confirmPassword" required><br><br>
+    <button type='submit'>Sign Up</button>
     <p>Already have an account? <a href='login.php'>Log in</a></p>
 </form>
-<?php
+<script type="module">
+import { confirmPassword } from '/IAP/js/confirmPassword.js';
+
+document.getElementById('signupForm').addEventListener('submit', function(e) {
+    if (!confirmPassword('password', 'confirmPassword')) {
+        e.preventDefault();
     }
-    private function submit_button($text) {
-        return "<button onCLick='confirmPassword()' type='submit'>$text</button>";
+});
+</script>
+<?php
     }
 
     public function signin() {
 ?>
 <form action='login.php' method='post'>
-    <label for='username'>Username:</label>
+    <label for='username'>Username:</label><br>
     <input type='text' id='username' name='username' required><br><br>
     <label for='password'>Password:</label>
     <input type='password' id='password' name='password' required><br><br>
-    <?php echo $this->submit_button('Sign In'); ?> <a href='./'>Don't have an account? Sign up</a>
+    <button type='submit'>Log In</button>
+    <a href='./'>Don't have an account? Sign up</a>
 </form>
 <?php
     }
-}   
+}
+?>
