@@ -1,4 +1,5 @@
 <?php
+  require __DIR__."/Password/Password.php";
   // Site timezone
   $conf['site_timezone'] = 'AFRICA/NAIROBI';
 
@@ -22,7 +23,7 @@
   $conf['mail_type'] = 'smtp';
   $conf['smtp_host'] = 'smtp.gmail.com';
   $conf['smtp_user'] = 'michael.mbugua@strathmore.edu';
-  $conf['smtp_pass'] = 'tacw edtc viun ruze';
+  $conf['smtp_pass'] = $appPassword;
   $conf['smtp_port'] = 465; 
   $conf['smtp_secure'] = 'ssl';
 ?>
