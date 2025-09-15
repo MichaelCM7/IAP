@@ -52,7 +52,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
         <div class="form-container">
             <h1 class="text-center mb-4">Join Project Impossible</h1>
             <p class="text-center mb-4">Start your journey to achieve the impossible</p>
-            <form id='signupForm' action='' method='post'>  
+            <form id='signupForm' action='loginSubmit.php' method='post'>  
                 <div class="form-group">
                     <label for='email'>Email</label>
                     <input type='email' id='email' name='email' required maxlength="100">
