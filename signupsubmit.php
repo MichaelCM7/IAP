@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/IAP/css/tables.css">
+  <link rel="stylesheet" href="/IAP/styles/tables.css">
   <title>Sign Up Submit</title>
 </head>
 <body>
@@ -26,9 +26,9 @@
   $password = $_POST["password"];
 
   //Insert Data in Maria DB
-  $sql = "INSERT INTO users (firstname, lastname, email, password)".
-           "VALUES ('$first_name', '$last_name', '$email', '$password')";
-  mysqli_query($connection, $sql);
+  // $sql = "INSERT INTO users (firstname, lastname, email, password)".
+  //          "VALUES ('$first_name', '$last_name', '$email', '$password')";
+  // mysqli_query($connection, $sql);
   
 
   $sqldata = "SELECT * FROM users";
@@ -38,7 +38,7 @@
   echo "User inserted successfully.";
 
   //Mail client info
-  $mailCnt = [
+  $mailClient = [
     'name_from' => $conf['site_name'],
     'mail_from' => $conf['site_email'],
     'name_to' => "$first_name $last_name",
@@ -57,7 +57,7 @@
 
   // Send the email
   $SendMail = new SendMail();
-  $result = $SendMail->Send_Mail($conf, $mailCnt);
+  $result = $SendMail->Send_Mail($conf, $mailClient);
 
   if($result){
     echo "Signup successful. Please check your email for verification.";

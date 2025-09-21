@@ -1,5 +1,5 @@
 <?php
-class forms {
+class formComponents {
     public function signup() {
 ?>
     <main class="container">
@@ -35,7 +35,7 @@ class forms {
         </div>
     </main>
 <script type="module">
-import { confirmPassword } from '/IAP/js/confirmPassword.js';
+import { confirmPassword } from '/IAP/scipts/confirmPassword.js';
 
 document.getElementById('signupForm').addEventListener('submit', function(e) {
     if (!confirmPassword('password', 'confirmPassword')) {

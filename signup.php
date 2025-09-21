@@ -1,6 +1,6 @@
 <?php
 require 'AutoLoad.php';
-$layout->formHeader($conf);
-$forms->signup();
-$layout->footer($conf);
+$components->formHeader($conf);
+$formComponents->signup();
+$components->footer($conf);
 ?>

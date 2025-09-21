@@ -1,6 +1,6 @@
 <?php
   //include "./conf.php";
-  class layouts {
+  class components {
     public function header($conf) {?>
         <!DOCTYPE html>
         <html lang="en">
@@ -8,7 +8,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title><?php echo $conf['site_name']?></title>
-            <link rel="stylesheet" href="/IAP/css/global.css">
+            <link rel="stylesheet" href="/IAP/styles/global.css">
         </head>
         <body>
             <header class="header">
@@ -34,7 +34,7 @@
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
             <title><?php echo $conf['site_name']?></title>
-            <link rel="stylesheet" href="/IAP/css/global.css">
+            <link rel="stylesheet" href="/IAP/styles/global.css">
         </head>
         <body>
             <header class="header">
