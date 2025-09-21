@@ -26,9 +26,9 @@
   $password = $_POST["password"];
 
   //Insert Data in Maria DB
-  // $sql = "INSERT INTO users (firstname, lastname, email, password)".
-  //          "VALUES ('$first_name', '$last_name', '$email', '$password')";
-  // mysqli_query($connection, $sql);
+  $sql = "INSERT INTO users (firstname, lastname, email, password)".
+           "VALUES ('$first_name', '$last_name', '$email', '$password')";
+  mysqli_query($connection, $sql);
   
 
   $sqldata = "SELECT * FROM users";

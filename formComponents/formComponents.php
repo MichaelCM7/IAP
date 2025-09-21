@@ -1,5 +1,5 @@
 <?php
-class formComponents {
+class FormComponents {
     public function signup() {
 ?>
     <main class="container">
