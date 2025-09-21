@@ -1,6 +1,6 @@
 <?php
 require "Autoload.php";
-$layout->header($conf);
-$layout->aboutContent();
-$layout->footer($conf);
+$components->header($conf);
+$components->aboutContent();
+$components->footer($conf);
 ?>

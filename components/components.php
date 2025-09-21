@@ -1,6 +1,6 @@
 <?php
   //include "./conf.php";
-  class components {
+  class Components {
     public function header($conf) {?>
         <!DOCTYPE html>
         <html lang="en">
