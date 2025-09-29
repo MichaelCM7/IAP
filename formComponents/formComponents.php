@@ -61,7 +61,7 @@ document.getElementById('signupForm').addEventListener('submit', function(e) {
                     <label for='password'>Password:</label>
                     <input type='password' id='password' name='password' required maxlength="50">
                 </div>
-                <button type='submit' class="btn btn-primary" style="width: 100%;">Sign Up</button>
+                <button type='submit' class="btn btn-primary" style="width: 100%;">Sign In</button>
             </form>       
             <p class="text-center" style="margin-top: 1.5rem;">
                 Don't have an account <a href="signup.php" style="color: var(--primary);">Sign up here</a>

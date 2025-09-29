@@ -9,7 +9,7 @@
 <body>
   <?php
   require "dbconnect.php";
-  require_once __DIR__ . '/Plugins/PHPMailer/vendor/autoload.php';
+  require_once __DIR__ . '../Plugins/PHPMailer/vendor/autoload.php';
   require __DIR__. "/Global/SendMail.php";
 
   echo "<pre>";
@@ -24,10 +24,11 @@
     exit(); 
   }
   $password = $_POST["password"];
+  $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
   //Insert Data in Maria DB
   $sql = "INSERT INTO users (firstname, lastname, email, password)".
-           "VALUES ('$first_name', '$last_name', '$email', '$password')";
+           "VALUES ('$first_name', '$last_name', '$email', '$hashed_password')";
   mysqli_query($connection, $sql);
   
 
